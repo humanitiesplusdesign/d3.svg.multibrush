@@ -1,2 +1,2 @@
-d3.svg-brush-plugin
+d3.svg.multibrush
 ===================
