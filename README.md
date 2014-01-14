@@ -19,14 +19,23 @@ brush.empty() will return true if no extents are defined or if all extents are e
 
 multibrush.**resizeAdaption**([function])
 
-A function that will be called on the d3.selection of an extent when a new extent is created. Since we dynamically create and destroy extents, you need to define any formatting or custom classes here. Example:
+A function that will be called on the d3.selection of a resizer when a new extent is created. Since we dynamically create and destroy extents and resizers, you need to define any formatting or custom classes here. Example:
 
 ```js
-multibrush.resizeAdaption()
+multibrush.resizeAdaption(
+  function (selection) {
+    selection.append("path")
+      .attr("transform", "translate(0, " + -(12.5) + ")");
+							
+    selection.select("rect").attr("height", 50);
+  )
+);
 ```
 
 
 multibrush.**extentAdaption**([function])
+
+A function that will be called on the d3.selection of an extent when a new extent is created. Since we dynamically create and destroy extents and resizers, you need to define any formatting or custom classes here. Example:
 
 ```js
 multibrush.resizeAdaption(
