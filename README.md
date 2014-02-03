@@ -38,7 +38,7 @@ multibrush.**extentAdaption**([function])
 A function that will be called on the d3.selection of an extent when a new extent is created. Since we dynamically create and destroy extents and resizers, you need to define any formatting or custom classes here. Example:
 
 ```js
-multibrush.resizeAdaption(
+multibrush.extentAdaption(
   function (selection) {
     selection.attr("height", 50)
 		  .attr("fill", 'white')
