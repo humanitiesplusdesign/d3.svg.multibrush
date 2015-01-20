@@ -196,12 +196,14 @@ d3.svg.multibrush = function() {
 
   function redrawX(g) {
     g.selectAll(".extent").attr("x", function (d) { return xExtent[d][0]; });
-    g.selectAll(".extent,.n>rect,.s>rect").attr("width", function(d) { return xExtent[d][1] - xExtent[d][0]; });
+    //g.selectAll(".extent,.n>rect,.s>rect").attr("width", function(d) { return xExtent[d][1] - xExtent[d][0]; });
+    g.selectAll(".extent").attr("width", function(d) { return xExtent[d][1] - xExtent[d][0]; });
   }
 
   function redrawY(g) {
     g.selectAll(".extent").attr("y", function (d) { return yExtent[d][0]; });
-    g.selectAll(".extent,.e>rect,.w>rect").attr("height", function (d) { return yExtent[d][1] - yExtent[d][0]; });
+    //g.selectAll(".extent,.e>rect,.w>rect").attr("height", function (d) { return yExtent[d][1] - yExtent[d][0]; });
+    g.selectAll(".extent").attr("height", function (d) { return yExtent[d][1] - yExtent[d][0]; });
   }
 
   function brushstart() {
