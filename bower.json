@@ -1,7 +1,7 @@
 {
   "name": "d3.svg.multibrush",
   "main": "d3.svg.multibrush.js",
-  "version": "0.9",
+  "version": "0.9.0",
   "homepage": "https://github.com/humanitiesplusdesign/d3.svg.multibrush",
   "authors": [
     "Ethan Jewett <esjewett@gmail.com>"
