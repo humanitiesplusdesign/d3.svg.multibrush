@@ -14,5 +14,8 @@
     "d3"
   ],
   "license": "BSD",
-  "ignore": [ ]
+  "ignore": [ ],
+  "dependencies": {
+    "d3": "^3.5.5"
+  }
 }
