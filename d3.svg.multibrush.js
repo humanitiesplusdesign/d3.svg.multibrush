@@ -1,4 +1,4 @@
-function() {
+(function () {
   d3.svg.multibrush = function() {
 
     // From d3/scale/scale.js
@@ -602,4 +602,4 @@ function() {
     ["n", "s"],
     []
   ];
-}();
+})();
