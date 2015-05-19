@@ -1,0 +1,18 @@
+{
+  "name": "d3.svg.multibrush",
+  "main": "d3.svg.multibrush.js",
+  "version": "0.9",
+  "homepage": "https://github.com/humanitiesplusdesign/d3.svg.multibrush",
+  "authors": [
+    "Ethan Jewett <esjewett@gmail.com>"
+  ],
+  "description": "A version of d3.svg.brush that supports multiple selections",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "d3"
+  ],
+  "license": "BSD",
+  "ignore": [ ]
+}
