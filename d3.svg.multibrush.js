@@ -191,7 +191,7 @@
             extent1 = {x: xExtent, y: yExtent, i: xExtentDomain, j: yExtentDomain},
             extent0 = this.__chart__ || extent1;
         this.__chart__ = extent1;
-        if (d3_transitionInheritId) {
+        if (typeof d3_transitionInheritId != "undefined") {
           d3.select(this).transition()
               .each("start.brush", function() {
                 xExtentDomain = extent0.i; // pre-transition state
