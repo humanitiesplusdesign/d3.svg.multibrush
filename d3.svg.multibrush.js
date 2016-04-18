@@ -191,37 +191,9 @@
             extent1 = {x: xExtent, y: yExtent, i: xExtentDomain, j: yExtentDomain},
             extent0 = this.__chart__ || extent1;
         this.__chart__ = extent1;
-        if (d3_transitionInheritId) {
-          d3.select(this).transition()
-              .each("start.brush", function() {
-                xExtentDomain = extent0.i; // pre-transition state
-                yExtentDomain = extent0.j;
-                xExtent = extent0.x;
-                yExtent = extent0.y;
-                event_({type: "brushstart"});
-              })
-              .tween("brush:brush", function() {
-                // TODO: transitions for all extents
-                var xi = d3_interpolateArray(xExtent[0], extent1.x[0]),
-                    yi = d3_interpolateArray(yExtent[0], extent1.y[0]);
-                xExtentDomain[0] = yExtentDomain[0] = null; // transition state
-                return function(t) {
-                  xExtent[0] = extent1.x[0] = xi(t);
-                  yExtent[0] = extent1.y[0] = yi(t);
-                  event_({type: "brush", mode: "resize"});
-                };
-              })
-              .each("end.brush", function() {
-                xExtentDomain = extent1.i; // post-transition state
-                yExtentDomain = extent1.j;
-                event_({type: "brush", mode: "resize"});
-                event_({type: "brushend"});
-              });
-        } else {
-          event_({type: "brushstart"});
-          event_({type: "brush", mode: "resize"});
-          event_({type: "brushend"});
-        }
+	event_({type: "brushstart"});
+	event_({type: "brush", mode: "resize"});
+	event_({type: "brushend"});
       });
     };
 
